@@ -20,7 +20,6 @@ body.static-scroll {
   height: 100%;
 }
 
-
 .special-gothic-expanded-one-regular { 
     font-family: "Special Gothic Expanded One", sans-serif; 
     font-weight: 400; 
@@ -44,10 +43,23 @@ a:hover {
   color: #515151
 }
 
-footer p {
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 1rem 2rem;
+  font-size: 0.75rem;
   text-align: center;
-  font-size: small;
+
+  background: white;
+
+  z-index: 9999;   /* higher than anything else */
+  pointer-events: auto;
 }
+
+
 
 
 
@@ -65,7 +77,10 @@ footer p {
   align-items: center;
 } 
 
-
+.grid img { 
+  width: 100%; 
+  height: auto; 
+} 
 
 /*Cursor Image Reveal*/
 /* container */
