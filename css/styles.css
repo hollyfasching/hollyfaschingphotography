@@ -1,4 +1,9 @@
 /*General Setup*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   line-height: 1.5;
@@ -43,39 +48,22 @@ a:hover {
   color: #515151
 }
 
-.site-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-
-  padding: 1rem 2rem;
-  font-size: 0.75rem;
-  text-align: center;
-
-  background: white;
-
-  z-index: 9999;   /* higher than anything else */
-  pointer-events: auto;
-}
-
-
-
 
 
 /*Grids*/
-.grid { 
-  display: grid; 
-  grid-template-columns: 1fr 3fr; 
-  gap: 2rem; 
-  max-width: 1200px; 
-  margin: auto;
-  height: 100%;
-  padding: 2em;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
 
-  min-height: calc(100vh - 4em);
+  height: 100vh;
+  padding: 2rem;
+
   align-items: center;
-} 
+  max-width: 1200px;
+  margin: auto;
+}
+
 
 .grid img { 
   width: 100%; 
