@@ -51,12 +51,12 @@ const revealImg = imageReveal.querySelector(".ir-reveal");
 // Image chapters
 const imageSets = [
   {
-    base: "./images/utah2025-12162025-8.jpg",
-    reveal: "./images/beatenpathco-96.JPG"
+    base: "./images/lightest-5.jpeg",
+    reveal: "./images/medium-4.jpeg"
   },
   {
-    base: "./images/hickoryrun-08122024-22.JPG",
-    reveal: "./images/vuori-10.JPG"
+    base: "./images/medium-7.jpeg",
+    reveal: "./images/lightest-1.jpeg"
   }
 ];
 

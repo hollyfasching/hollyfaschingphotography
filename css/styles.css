@@ -60,6 +60,8 @@ a:hover {
   box-align: center;
 }
 
+
+/*Nav*/
 .nav-links {
   display: flex;
   flex-direction: column;
@@ -72,29 +74,54 @@ a:hover {
   box-align: center;
 }
 
+.nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.nav-parent {
+  font-size: 1rem;
+}
+
+.nav-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-left: 1.25rem;
+  margin-top: 0.15rem;
+}
+
+.nav-sub a {
+  font-size: 0.8rem;
+  color: #515151;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  line-height: 2;
+}
+
+
 
 /*Grids*/
 .grid {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 2rem;
-
   height: 100vh;
   padding: 2rem;
-
   align-items: center;
   max-width: 1200px;
   margin: auto;
+  min-height: 0;
 }
-
 
 .grid img { 
   width: 100%; 
   height: auto; 
 } 
 
+
+
 /*Cursor Image Reveal*/
-/* container */
 .image-reveal {
   display: block;
   width: 100%;
@@ -105,7 +132,6 @@ a:hover {
   overflow: hidden;
 }
 
-/* images */
 .image-reveal img {
   position: absolute;
   inset: 0;
@@ -115,12 +141,10 @@ a:hover {
   margin: 0;
 }
 
-/* bottom image */
 .ir-base {
   z-index: 1;
 }
 
-/* top image with mask */
 .ir-reveal {
   z-index: 2;
 
@@ -145,7 +169,6 @@ a:hover {
   mask-size: 100% 100%;
 }
 
-/* cursor ring */
 .ir-port {
   z-index: 3;
   position: absolute;

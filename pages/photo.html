@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&family=Special+Gothic:wght@400..700&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <script src="./js/script.js" defer></script>
@@ -15,20 +15,23 @@
     <div class="grid">
 
         <div class="nav-column">
-            <a href="./images/samplelogo.png" class="logo"><img src="./images/samplelogo.png"></a>
+            <a href="../images/samplelogo.png" class="logo"><img src="../images/samplelogo.png"></a>
             <div class="nav-links">
-                <a href="./pages/photo.html"><p>Photo</p></a>
+                
+                <div class="nav-group">
+                    <a href="photo.html" class="nav-parent">Photo</a>
+                    <div class="nav-sub">
+                        <a href="seniors.html">Senior Portraits</a>
+                        <a href="events.html">Events and Marketing</a>
+                        <a href="sports.html">Collegiate Sports</a>
+                    </div>
+                </div>
                 <a href="design.html"><p>Design</p></a>
                 <a href="contact.html"><p>Contact</p></a>
                 <a href="about.html"><p>About</p></a>
             </div>
         </div>
         
-        <div class="image-reveal" data-radius="200">
-            <img src="./images/lightest-5.jpeg" class="ir-base" alt="">
-            <img src="./images/medium-4.jpeg" class="ir-reveal" alt="">
-            <div class="ir-port"></div>
-        </div>
     </div>
 
    
