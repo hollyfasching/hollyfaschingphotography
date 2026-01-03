@@ -1,8 +1,9 @@
 window.addEventListener(
   "wheel",
   (e) => {
-    e.preventDefault(); // stop page scroll
+    if (document.getElementById("lightbox")?.classList.contains("active")) return;
 
+    e.preventDefault();
     scrollAccumulator += e.deltaY;
 
     if (Math.abs(scrollAccumulator) >= SCROLL_THRESHOLD) {
@@ -18,3 +19,4 @@ window.addEventListener(
   },
   { passive: false }
 );
+
