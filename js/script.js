@@ -1,45 +1,20 @@
-const preloadImages = (srcs) => {
-  srcs.forEach(src => {
-    const img = new Image();
-    img.src = src;
-  });
-};
+window.addEventListener(
+  "wheel",
+  (e) => {
+    e.preventDefault(); // stop page scroll
 
-preloadImages([
-  "./images/NEW-BASE-IMAGE.jpg",
-  "./images/NEW-REVEAL-IMAGE.jpg"
-]);
+    scrollAccumulator += e.deltaY;
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("static-scroll");
-});
+    if (Math.abs(scrollAccumulator) >= SCROLL_THRESHOLD) {
+      if (scrollAccumulator > 0 && currentIndex < images.length - 1) {
+        currentIndex++;
+      } else if (scrollAccumulator < 0 && currentIndex > 0) {
+        currentIndex--;
+      }
 
-document.querySelectorAll(".image-reveal").forEach(container => {
-  const reveal = container.querySelector(".ir-reveal");
-  const port = container.querySelector(".ir-port");
-  if (!reveal || !port) return;
-
-  const radius = container.dataset.radius || 200;
-
-  container.addEventListener("mousemove", e => {
-    const rect = container.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    reveal.style.setProperty("--x", `${x}px`);
-    reveal.style.setProperty("--y", `${y}px`);
-    reveal.style.setProperty("--r", `${radius}px`);
-
-    port.style.left = `${x}px`;
-    port.style.top = `${y}px`;
-    port.style.opacity = 1;
-  });
-
-  container.addEventListener("mouseleave", () => {
-    reveal.style.setProperty("--r", `0px`);
-    port.style.opacity = 0;
-  });
-});
-
-const imageReveal = document.querySelector(".image-reveal");
-
+      updateImage(currentIndex);
+      scrollAccumulator = 0;
+    }
+  },
+  { passive: false }
+);

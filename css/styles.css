@@ -120,69 +120,7 @@ a:hover {
 } 
 
 
-
-/*Cursor Image Reveal*/
-.image-reveal {
-  display: block;
-  width: 100%;
-  max-width: 900px;
-  height: 56.25vw;
-  max-height: 506px;
-  position: relative;
-  overflow: hidden;
-}
-
-.image-reveal img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin: 0;
-}
-
-.ir-base {
-  z-index: 1;
-}
-
-.ir-reveal {
-  z-index: 2;
-
-  --x: 50%;
-  --y: 50%;
-  --r: 0px;
-
-  -webkit-mask-image: radial-gradient(
-    circle var(--r) at var(--x) var(--y),
-    black 100%,
-    transparent 101%
-  );
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: 100% 100%;
-
-  mask-image: radial-gradient(
-    circle var(--r) at var(--x) var(--y),
-    black 100%,
-    transparent 101%
-  );
-  mask-repeat: no-repeat;
-  mask-size: 100% 100%;
-}
-
-.ir-port {
-  z-index: 3;
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: difference;
-  opacity: 0;
-}
-
-
-
+/*Photo Column*/
 .photo-column {
   height: 90%;
   min-height: 0;
