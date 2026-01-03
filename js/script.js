@@ -1,4 +1,3 @@
-// Preload images to eliminate swap delay
 const preloadImages = (srcs) => {
   srcs.forEach(src => {
     const img = new Image();
@@ -11,12 +10,15 @@ preloadImages([
   "./images/NEW-REVEAL-IMAGE.jpg"
 ]);
 
-document.body.classList.add("static-scroll");
-
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("static-scroll");
+});
 
 document.querySelectorAll(".image-reveal").forEach(container => {
   const reveal = container.querySelector(".ir-reveal");
   const port = container.querySelector(".ir-port");
+  if (!reveal || !port) return;
+
   const radius = container.dataset.radius || 200;
 
   container.addEventListener("mousemove", e => {
@@ -39,54 +41,5 @@ document.querySelectorAll(".image-reveal").forEach(container => {
   });
 });
 
-
-
-
-// ---- Virtual scroll image chapters ----
-
 const imageReveal = document.querySelector(".image-reveal");
-const baseImg = imageReveal.querySelector(".ir-base");
-const revealImg = imageReveal.querySelector(".ir-reveal");
 
-// Image chapters
-const imageSets = [
-  {
-    base: "./images/lightest-5.jpeg",
-    reveal: "./images/medium-4.jpeg"
-  },
-  {
-    base: "./images/medium-7.jpeg",
-    reveal: "./images/lightest-1.jpeg"
-  }
-];
-
-let virtualScroll = 0;
-let currentSet = 0;
-
-const FORWARD_THRESHOLD = 300;
-const BACK_THRESHOLD = 150;
-
-window.addEventListener(
-  "wheel",
-  (e) => {
-    e.preventDefault();
-
-    virtualScroll += e.deltaY;
-    virtualScroll = Math.max(0, Math.min(virtualScroll, FORWARD_THRESHOLD * 2));
-
-    // Scroll DOWN → next image set
-    if (currentSet === 0 && virtualScroll > FORWARD_THRESHOLD) {
-      baseImg.src = imageSets[1].base;
-      revealImg.src = imageSets[1].reveal;
-      currentSet = 1;
-    }
-
-    // Scroll UP → previous image set
-    if (currentSet === 1 && virtualScroll < BACK_THRESHOLD) {
-      baseImg.src = imageSets[0].base;
-      revealImg.src = imageSets[0].reveal;
-      currentSet = 0;
-    }
-  },
-  { passive: false }
-);

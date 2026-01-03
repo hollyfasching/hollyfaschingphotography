@@ -180,3 +180,50 @@ a:hover {
   mix-blend-mode: difference;
   opacity: 0;
 }
+
+
+
+.photo-column {
+  height: 90%;
+  min-height: 0;
+  display: flex;
+}
+
+.gallery-wrap {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 0.5rem;
+}
+
+.masonry-gallery {
+  column-width: 220px;
+  column-gap: 1rem;
+}
+
+
+.masonry-gallery img {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}
+
+@media (max-width: 1100px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .masonry-gallery {
+    column-count: 1;
+  }
+}
+
+
+
