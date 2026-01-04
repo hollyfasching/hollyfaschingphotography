@@ -4,7 +4,6 @@
 
 body {
   margin: 0;
-  line-height: 0.25;
   background: #fff;
   color: #111;
   font-family: "Special Gothic", sans-serif;
@@ -40,6 +39,7 @@ body.static-scroll {
 a {
   color: #000000;
   text-decoration: none;
+  line-height: 0.25;
 }
 
 a:hover {
@@ -117,6 +117,23 @@ a:hover {
   height: auto; 
 } 
 
+.text-wrap {
+  line-height: 1.5;
+}
+
+.text-wrap img {
+  float: right;
+  width: 300px;
+  max-width: none;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.text-wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 
 
 /*Photo Column*/
@@ -190,7 +207,3 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
-
-
-
-
