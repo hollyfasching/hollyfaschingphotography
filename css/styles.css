@@ -125,8 +125,14 @@ a:hover {
   padding-left: 2em;
 }
 
+.text-viewport {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+}
+
 .text-wrap {
-  line-height: 1.5;
+  grid-row: 2;
 }
 
 .text-wrap img {
