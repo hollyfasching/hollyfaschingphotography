@@ -131,6 +131,30 @@ a:hover {
   margin-top: 1rem;
 }
 
+.list-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1rem;
+}
+
+.list-items li {
+  list-style: none;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.list-items li::marker {
+  content: none;
+}
+
+.clients-heading {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
 
 .text-viewport {
   min-height: 100vh;
@@ -146,7 +170,7 @@ a:hover {
   float: right;
   width: 300px;
   max-width: none;
-  margin: 0 0 1rem 1.5rem;
+  margin: 3rem 0 1rem 1.5rem;
 }
 
 .text-wrap::after {
@@ -353,16 +377,21 @@ a:hover {
   }
 
   .image-center {
-    min-height: auto;
-    display: block;
-    padding-top: 2em;
-    padding-bottom: 1rem;
-    padding-left: 0;
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    padding-top: 4rem;
   }
 
   .image-center img {
-    display: block;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .image-row {
@@ -370,17 +399,17 @@ a:hover {
   }
 
   .image-module {
-    padding-top: 1rem;
+    padding-top: 4rem;
   }
 
   .masonry-gallery {
-    padding-top: 1rem;
+    padding-top: 4rem;
   }
 
   .text-wrap {
     display: flex;
     flex-direction: column;
-    padding-top: 1rem;
+    padding-top: 4rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
