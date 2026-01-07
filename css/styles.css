@@ -46,7 +46,7 @@ a:hover {
 /*Nav*/
 .nav-column {
   position: fixed;
-  left: 2rem;
+  left: 4rem;
   top: 50%;
   transform: translateY(-50%);
   width: 200px;
@@ -125,6 +125,12 @@ a:hover {
   padding-left: 2em;
 }
 
+.links {
+  clear: both;
+  margin-top: 1rem;
+}
+
+
 .text-viewport {
   min-height: 100vh;
   display: grid;
@@ -151,7 +157,7 @@ a:hover {
 .secondary-wrap img {
   float: left;
   width: 200px;
-  margin: 1rem 1.5rem 0 0;
+  margin: 1rem 1.5rem 1.5em;
 }
 
 @media (max-width: 700px) {
@@ -215,4 +221,167 @@ a:hover {
   height: auto;
   display: block;
   padding-top: .5em;
+}
+
+
+
+
+
+
+/* Mobile and Tablet*/
+@media (max-width: 700px) {
+
+  /*Nav*/
+
+  .nav-column {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background: #fff;
+    z-index: 1100;
+    transform: none;
+  }
+
+
+  .logo img {
+    max-width: 72px;
+    height: auto;
+    display: block;
+  }
+
+  .nav-toggle {
+    display: block;
+    width: 28px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .nav-toggle span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #111;
+    transition: 0.3s ease;
+  }
+
+  .nav-toggle span:nth-child(1) {
+    top: 0;
+  }
+
+  .nav-toggle span:nth-child(2) {
+    top: 9px;
+  }
+
+  .nav-toggle span:nth-child(3) {
+    top: 18px;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    height: 101vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .nav-column.open .nav-links {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    line-height: 1.2;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links p {
+    margin: 0;
+  }
+
+  .nav-sub {
+    padding-left: 0;
+    margin-top: 1rem;
+    align-items: center;
+  }  
+
+  .nav-sub a {
+    font-size: 0.8rem;
+    color: #515151;
+    line-height: 1;
+    text-align: center;
+    width: 100%;
+    padding: 0.25rem 0;
+  }
+
+  .nav-column {
+    position: relative;
+    z-index: 1100;
+  }
+
+  .menu-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 2rem;
+    line-height: 1;
+    color: #111;
+    cursor: pointer;
+  }
+
+  .grid {
+    padding-top: 0.75rem;
+  }
+
+  .image-center {
+    min-height: auto;
+    display: block;
+    padding-top: 2em;
+    padding-bottom: 1rem;
+    padding-left: 0;
+  }
+
+  .image-center img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .image-row {
+    grid-template-columns: 1fr;
+  }
+
+  .image-module {
+    padding-top: 1rem;
+  }
+
+  .masonry-gallery {
+    padding-top: 1rem;
+  }
+
 }
