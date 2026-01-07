@@ -117,6 +117,8 @@ a:hover {
   height: auto; 
 } 
 
+
+
 .text-wrap {
   line-height: 1.5;
 }
@@ -132,6 +134,12 @@ a:hover {
   content: "";
   display: block;
   clear: both;
+}
+
+.secondary-wrap img {
+  float: left;
+  width: 200px;
+  margin: 1rem 1.5rem 0 0;
 }
 
 
