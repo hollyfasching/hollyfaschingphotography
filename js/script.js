@@ -1,3 +1,14 @@
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    const imgs = link.dataset.preload?.split(",");
+    imgs?.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, { once: true });
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav-toggle");
   const navColumn = document.querySelector(".nav-column");
