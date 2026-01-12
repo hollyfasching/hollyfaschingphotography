@@ -8,7 +8,6 @@ document.querySelectorAll("a").forEach(link => {
   }, { once: true });
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav-toggle");
   const navColumn = document.querySelector(".nav-column");

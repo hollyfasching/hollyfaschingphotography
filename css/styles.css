@@ -212,6 +212,15 @@ a:hover {
   display: block;
   margin-bottom: 1rem;
   break-inside: avoid;
+  object-fit: cover;
+}
+
+.masonry-gallery img.three-two {
+  aspect-ratio: 3 / 2;
+}
+
+.masonry-gallery img.two-three {
+  aspect-ratio: 2/3
 }
 
 @media (max-width: 1100px) {
