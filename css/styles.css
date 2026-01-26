@@ -4,11 +4,13 @@
 
 body {
   margin: 0;
-  background: #fff;
+  background: #F8F3F2;
   color: #111;
-  font-family: "Special Gothic", sans-serif;
-  font-weight: 400;
+  font-family: "Figtree", sans-serif;
+  font-weight: 300;
+  font-size: smaller;
   font-style: normal;
+  line-height: 2;
 }
 
 html,
@@ -17,19 +19,12 @@ body {
   overflow-y: auto;
 }
 
-.special-gothic-expanded-one-regular { 
-    font-family: "Special Gothic Expanded One", sans-serif; 
-    font-weight: 400; 
-    font-style: normal; 
+.figtree-font {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
-
-.special-gothic-uniquifier { 
-  font-family: "Special Gothic", sans-serif; 
-  font-optical-sizing: auto; 
-  font-weight: 12px; 
-  font-style: normal; 
-  font-variation-settings: "wdth" 100; 
-} 
 
 a {
   color: #000000;
@@ -60,6 +55,7 @@ a:hover {
   width: 100%;
   max-width: 200px;
   box-align: center;
+  margin-left: -2rem;
 }
 
 .nav-links {
