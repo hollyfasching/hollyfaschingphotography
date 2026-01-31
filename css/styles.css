@@ -358,7 +358,6 @@ a:hover {
     flex-direction: row;
     z-index: 1100;
     transform: none;
-    background: transparent;
   }
 
   .logo img {
@@ -415,7 +414,6 @@ a:hover {
     pointer-events: none;
     transition: opacity 0.3s ease;
     z-index: 1000;
-    background: transparent;
   }
 
   .nav-column.open .nav-links {
