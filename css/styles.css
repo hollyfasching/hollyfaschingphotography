@@ -402,7 +402,6 @@ a:hover {
     left: 0;
     right: 0;
     height: calc(100vh - 72px);
-    background: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
