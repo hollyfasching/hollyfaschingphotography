@@ -342,6 +342,10 @@ a:hover {
   html {
     font-size: 90%;
   }
+
+  .grid {
+    padding: 1rem;
+  }
   
   /*Nav*/
 
