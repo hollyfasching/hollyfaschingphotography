@@ -356,15 +356,15 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    background: #fff;
     z-index: 1100;
     transform: none;
   }
 
   .logo img {
-    max-width: 72px;
+    max-width: 120px;
     height: auto;
     display: block;
+    padding-left: 2rem;
   }
 
   .nav-toggle {
@@ -455,12 +455,11 @@ a:hover {
     align-items: center;
     justify-content: center;
     padding: 0;
-    padding-top: 3rem;
   }
 
   .image-center img {
     width: 100%;
-    height: 90%;
+    height: 80%;
     object-fit: cover;
     object-position: 55% 20%;
   }
