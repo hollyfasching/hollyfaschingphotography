@@ -415,7 +415,7 @@ a:hover {
     pointer-events: none;
     transition: opacity 0.3s ease;
     z-index: 1000;
-    color: #F8F3F2;
+    background: #F8F3F2;
   }
 
   .nav-column.open .nav-links {
